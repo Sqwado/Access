@@ -73,6 +73,83 @@ abbr{
     border-bottom: 1px dotted #333;
 }
 
+form{
+    display: flex;
+    
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 10px;
+}
+
+.form-left{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group label{
+    width: 50%;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submit{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background: #868686;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover{
+    background: #000;
+    color: #fff;
+}
+
+.not-valid{
+    border: 5px solid red;
+}
+
+.valid{
+    border: 5px solid green;
+}
+
+.form-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 footer{
     position: relative;
     bottom: 0;
