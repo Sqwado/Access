@@ -4,6 +4,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+
+    animation: all 0.3s ease;
 }
 
 body {
@@ -18,7 +20,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     margin-bottom: 0px;
     border-radius: 5px;
@@ -29,11 +31,10 @@ header {
     width: calc(100% - 20px);
 }
 
-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+#MainTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -52,32 +53,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        width: 0;
-    }
-
-    #menuButton {
-        display: block;
-        cursor: pointer;
-        background: #fff;
-        border: none;
-    }
-
-    #menuButton::before {
-        content: '\2630';
-        font-size: 50px;
-    }
-
-    nav {
-        display: flex;
-        justify-content: end;
-        width: 100%;
-    }
-
 }
 
 .nav-link {
@@ -101,7 +76,6 @@ a:hover {
 }
 
 main {
-    margin: 0px 10px;
     margin-top: 120px;
 }
 
@@ -110,13 +84,19 @@ section {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0px;
+    margin: 10px;
 }
 
 abbr {
     cursor: help;
     border-bottom: 1px dotted #333;
 }
+
+img {
+    width: 300px;
+}
+
+
 
 dl {
     display: flex;
@@ -156,8 +136,7 @@ form {
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px 10px;
+    padding: 10px;
 }
 
 .form-left {
@@ -198,7 +177,8 @@ input {
 
 textarea {
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid #333;
     border-radius: 5px;
     width: 100%;
@@ -207,7 +187,9 @@ textarea {
 
 .sendBut {
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     border-radius: 5px;
     width: 100%;
     background: #ffffff;
@@ -254,6 +236,7 @@ textarea {
     width: 100%;
     padding: 2px;
     margin: 5px;
+    margin-bottom: 0px;
 }
 
 footer {
@@ -266,4 +249,64 @@ footer {
     color: #333;
     text-align: center;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 0;
+    }
+
+    #menuButton {
+        display: block;
+        cursor: pointer;
+        background: #fff;
+        border: none;
+    }
+
+    #menuButton::before {
+        content: '\2630';
+        font-size: 50px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+
+    #contactForm {
+        flex-direction: column;
+    }
+
+    .form-group{
+        margin-bottom: 5px;
+    }
+
+    .form-data {
+        flex-direction: column;
+    }
+
+    .form-right {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #sendBut {
+        margin-top: 0px;
+    }
+
+}
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    let nameregex = "^([a-zA-Zàáâäçèéêëìíîïñòóôöùúûü \-\']+)$"
     let phoneregex = "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))"
 
     let emailregex = "^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})$"
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     firstname.addEventListener("input", function () {
-        if (firstname.value.length > 0) {
+        if (firstname.value.match(nameregex) && firstname.value.length > 0) {
             firstnameValid = true
             firstnameerror.hidden = true
         } else {
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     lastname.addEventListener("input", function () {
-        if (lastname.value.length > 0) {
+        if (lastname.value.match(nameregex) && lastname.value.length > 0) {
             lastnameValid = true
             lastnameerror.hidden = true
         } else {
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     email.addEventListener("input", function () {
-        if (email.value.match(emailregex)) {
+        if (email.value.match(emailregex) && email.value.length > 0) {
             emailValid = true
             emailerror.hidden = true
         } else {
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     phone.addEventListener("input", function () {
-        if (phone.value.match(phoneregex)) {
+        if (phone.value.match(phoneregex) && phone.value.length > 0) {
             phoneValid = true
             phoneerror.hidden = true
         } else {
