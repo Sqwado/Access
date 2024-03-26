@@ -13,7 +13,8 @@
     <header>
         <h1 id="MainTitle"><a href="index.html">Processit</a></h1>
         <nav>
-            <ul>
+            <button id="menuButton" aria-expanded="false" aria-controls="nav-links"></button>
+            <ul class="nav-links">
                 <li><a href="#presentation" class="nav-link">Présentation</a></li>
                 <li><a href="#products" class="nav-link">Produits</a></li>
                 <li><a href="#support" class="nav-link">Support</a></li>
@@ -48,9 +49,9 @@
                 </p>
             </section>
             <section class="images">
-                <img src="sff-01-1.jpg" alt="Boitier SFF-01">
-                <img src="sff-01-2.jpg" alt="Boitier SFF-01">
-                <img src="sff-01-3.jpg" alt="Boitier SFF-01">
+                <img src="assets/sff-01-1.jpg" alt="Boitier SFF-01">
+                <img src="assets/sff-01-2.jpg" alt="Boitier SFF-01">
+                <img src="assets/sff-01-3.jpg" alt="Boitier SFF-01">
             </section>
             <section class="caracteristiques-tech">
                 <h3>Caractéristiques techniques</h3>
@@ -96,35 +97,52 @@
                 <h3>Contact par messagerie instantanée</h3>
                 <p>Vous pouvez également nous contacter par messagerie instantanée. Nous sommes disponibles 7j/7 de 9h à
                     18h.</p>
-                <form action="">
+                <form action="" id="contactForm">
                     <div class="form-left">
                         <div class="form-group">
-                            <label for="firstname">Prénom</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="John" required>
+                            <div class="form-data">
+                                <label for="lastname">Lastname</label>
+                                <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+                            </div>
+                            <label id="lastnameerror" class="error" for="lastname" hidden>Lastname is
+                                required</label>
                         </div>
                         <div class="form-group">
-                            <label for="lastname">Nom</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+                            <div class="form-data">
+                                <label for="firstname">Firstname</label>
+                                <input type="text" id="firstname" name="firstname" placeholder="John" required>
+                            </div>
+                            <label id="firstnameerror" class="error" for="firstname" hidden>Firstname is
+                                required</label>
                         </div>
                         <div class="form-group">
-                            <label for="birthdate">Date de naissance</label>
-                            <input type="date" id="birthdate" name="birthdate" required>
+                            <div class="form-data">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                            </div>
+                            <label id="emailerror" class="error" for="email" hidden>Email wrong
+                                format</label>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                            <div class="form-data">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                            </div>
+                            <label id="phoneerror" class="error" for="phone" hidden>Phone wrong
+                                format</label>
                         </div>
                     </div>
                     <div class="form-right">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="10" cols="50" placeholder="Votre message"
-                            required></textarea>
-                        <input type="submit" value="Envoyer" class="submit valid">
-                    </div>
+                        <div class="form-group">
+                            <div class="form-data">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Your message" rows="10" cols="50"
+                                    minlength="30" required></textarea>
+                            </div>
+                            <label id="messageerror" class="error" for="message" hidden>Message is required
+                                and must be at least 30 characters</label>
+                            <input id="sendBut" type="submit" value="Envoyer" class="sendBut" disabled>
+                        </div>
                 </form>
             </section>
         </section>

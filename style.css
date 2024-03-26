@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,7 +6,7 @@
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background: #f4f4f4;
     color: #333;
@@ -15,7 +14,7 @@ body{
     font-size: 18px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -30,21 +29,58 @@ header{
     width: calc(100% - 20px);
 }
 
-nav{
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-ul{
+#menuButton {
+    display: none;
+}
+
+.nav-links {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.nav-link{
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 0;
+    }
+
+    #menuButton {
+        display: block;
+        cursor: pointer;
+        background: #fff;
+        border: none;
+    }
+
+    #menuButton::before {
+        content: '\2630';
+        font-size: 50px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+
+}
+
+.nav-link {
     padding: 10px;
     color: #333;
     border-radius: 5px;
@@ -52,24 +88,24 @@ ul{
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.nav-link:hover{
+.nav-link:hover {
     background: #f4f4f4;
 }
 
-a{
+a {
     color: #333;
 }
 
-a:hover{
+a:hover {
     color: #000;
 }
 
-main{
+main {
     margin: 0px 10px;
     margin-top: 120px;
 }
 
-section{
+section {
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -77,12 +113,12 @@ section{
     margin: 10px 0px;
 }
 
-abbr{
+abbr {
     cursor: help;
     border-bottom: 1px dotted #333;
 }
 
-dl{
+dl {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -94,7 +130,7 @@ dl{
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-dl div{
+dl div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,19 +139,19 @@ dl div{
     padding: 10px;
 }
 
-dl div:last-child{
+dl div:last-child {
     border-bottom: none;
 }
 
-dt{
+dt {
     width: 50%;
 }
 
-dd{
+dd {
     width: 50%;
 }
 
-form{
+form {
     display: flex;
     background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -124,74 +160,103 @@ form{
     margin: 20px 10px;
 }
 
-.form-left{
+.form-left {
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.form-group{
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-data {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.form-group label{
-    width: 50%;
+.form-group label {
+    text-align: center;
 }
 
-input{
+input {
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid #333;
     border-radius: 5px;
     width: 100%;
 }
 
-textarea{
+textarea {
     padding: 10px;
     margin: 10px;
     border: 1px solid #333;
     border-radius: 5px;
     width: 100%;
+    resize: none;
 }
 
-.submit{
+.sendBut {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     width: 100%;
-    background: #868686;
+    background: #ffffff;
     color: #000;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.submit:hover{
+.sendBut:hover {
     background: #000;
     color: #fff;
+    border: 2px solid #24f200;
 }
 
-.not-valid{
-    border: 5px solid red;
+.sendBut:disabled {
+    background: #f4f4f4;
+    color: #333;
+    cursor: not-allowed;
 }
 
-.valid{
-    border: 5px solid green;
+.sendBut:disabled:hover {
+    background: #f4f4f4;
+    color: #333;
+    border: 2px solid #eb0606;
 }
 
-.form-right{
+.form-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-footer{
+.error {
+    border: 2px solid #eb0606;
+    border-radius: 5px;
+    color: red;
+    font-size: 14px;
+
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    margin: 5px;
+}
+
+footer {
     position: relative;
     bottom: 0;
     left: 0;
