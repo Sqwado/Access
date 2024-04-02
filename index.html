@@ -15,11 +15,13 @@
     <header>
         <h1 id="MainTitle"><a href="index.html">Processit</a></h1>
         <nav>
-            <button id="menuButton" name="navtoggle" aria-expanded="false" aria-controls="nav-links"></button>
-            <ul class="nav-links">
-                <li><a href="#presentation" class="nav-link">Presentation</a></li>
-                <li><a href="#products" class="nav-link">Products</a></li>
-                <li><a href="#support" class="nav-link">Support</a></li>
+            <button id="menuButton" name="navtoggle" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Navigation Menu"></button>
+            <ul class="nav-links" id="navlinks" style="display: none;" hidden>
+                <li><a href="#presentation" class="nav-link" aria-label="Link to Presentation section">Presentation</a>
+                </li>
+                <li><a href="#products" class="nav-link" aria-label="Link to Products section">Products</a></li>
+                <li><a href="#support" class="nav-link" aria-label="Link to Support section">Support</a></li>
             </ul>
         </nav>
     </header>
@@ -39,8 +41,10 @@
             <section class="presentation">
                 <h2>The SFF-01 Range</h2>
                 <p>We offer a flagship product, the SFF-01 case. This case is designed to accommodate a mini-ITX
-                    configuration. It is made of aluminum, which gives it great lightness and excellent heat dissipation.
-                    The SFF-01 case has a very small volume of less than 10 liters, making it an ideal product for compact
+                    configuration. It is made of aluminum, which gives it great lightness and excellent heat
+                    dissipation.
+                    The SFF-01 case has a very small volume of less than 10 liters, making it an ideal product for
+                    compact
                     configurations.
                 </p>
             </section>
@@ -48,6 +52,11 @@
                 <img src="assets/sff-01-1.jpg" alt="SFF-01 Case">
                 <img src="assets/sff-01-2.jpg" alt="SFF-01 Case">
                 <img src="assets/sff-01-3.jpg" alt="SFF-01 Case">
+                <video id="video" controls preload="metadata">
+                    <source src="assets/sff-01.mp4" type="video/mp4">
+                    <track default kind="captions" srclang="en" src="/assets/sff-01.vtt">
+                    Your browser does not support the video tag.
+                </video>
             </section>
             <section class="caracteristiques-tech">
                 <h3>Technical Specifications</h3>
@@ -97,7 +106,8 @@
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="lastname">Lastname</label>
-                                <input type="text" id="lastname" name="lastname" placeholder="Doe" required>
+                                <input type="text" id="lastname" name="lastname" placeholder="Doe" required
+                                    aria-label="Lastname" aria-labelledby="lastname" aria-required="true">
                             </div>
                             <label id="lastnameerror" class="error" for="lastname" hidden>Lastname is
                                 required</label>
@@ -105,7 +115,8 @@
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="firstname">Firstname</label>
-                                <input type="text" id="firstname" name="firstname" placeholder="John" required>
+                                <input type="text" id="firstname" name="firstname" placeholder="John" required
+                                    aria-label="Firstname" aria-labelledby="firstname" aria-required="true">
                             </div>
                             <label id="firstnameerror" class="error" for="firstname" hidden>Firstname is
                                 required</label>
@@ -113,7 +124,8 @@
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required
+                                    aria-label="Email" aria-labelledby="email" aria-required="true">
                             </div>
                             <label id="emailerror" class="error" for="email" hidden>Email wrong
                                 format</label>
@@ -121,7 +133,8 @@
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="0123456789" required>
+                                <input type="tel" id="phone" name="phone" placeholder="0123456789" required
+                                    aria-label="Phone" aria-labelledby="phone" aria-required="true">
                             </div>
                             <label id="phoneerror" class="error" for="phone" hidden>Phone wrong
                                 format</label>
@@ -132,12 +145,12 @@
                             <div class="form-data">
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" placeholder="Your message" rows="10" cols="50"
-                                    minlength="30" required></textarea>
+                                    minlength="30" required aria-label="Your message" aria-labelledby="message"
+                                    aria-required="true"></textarea>
+                                <label id="messageerror" class="error" for="message" hidden>Message is required
+                                    and must be at least 30 characters</label>
                             </div>
-                            <label id="messageerror" class="error" for="message" hidden>Message is required
-                                and must be at least 30 characters</label>
-                        </div>
-                        <input id="sendBut" type="submit" value="Send" class="sendBut" disabled>
+                            <input id="sendBut" type="submit" value="Send" class="sendBut" disabled aria-label="Send">
                 </form>
             </section>
         </section>

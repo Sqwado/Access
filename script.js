@@ -1,9 +1,51 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    let menuButton = document.getElementById("menuButton")
+
+    let navlinks = document.getElementById("navlinks")
+
+    function hideNav() {
+        navlinks.hidden = true
+        navlinks.style.display = "none"
+        menuButton.ariaExpanded = false
+    }
+
+    function showNav() {
+        navlinks.hidden = false
+        navlinks.style.display = "flex"
+        menuButton.ariaExpanded = true
+    }
+
+    function resize() {
+        if (document.body.clientWidth < 768) {
+            hideNav()
+        } else {
+            showNav()
+        }
+    }
+    
+    resize()
+
+    menuButton.addEventListener("click", function () {
+        if (navlinks.hidden) {
+            showNav()
+        } else {
+            hideNav()
+        }
+    })
+
+    window.addEventListener("resize", function () {
+        resize()
+    })
+
+
+
+
+
     let nameregex = "^([a-zA-Zàáâäçèéêëìíîïñòóôöùúûü \-\']+)$"
     let phoneregex = "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))"
-
+    // let phoneregex = "^[+33|0][6|7][0-9]{8,8}$"
     let emailregex = "^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})$"
 
     let messageMinLength = 30

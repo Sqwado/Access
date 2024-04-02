@@ -8,6 +8,12 @@
     animation: all 0.3s ease;
 }
 
+html{
+    scroll-padding-top: 100px;
+    animation: all 0.3s ease;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #f4f4f4;
@@ -31,7 +37,7 @@ header {
     width: calc(100% - 20px);
 }
 
-#MainTitle{
+#MainTitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +82,7 @@ a:hover {
 }
 
 main {
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 section {
@@ -96,7 +102,10 @@ img {
     width: 300px;
 }
 
-
+#video {
+    width: 100%;
+    height: 100%;
+}
 
 dl {
     display: flex;
@@ -258,7 +267,19 @@ footer {
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
-        width: 0;
+        position: absolute;
+        flex-direction: column;
+        top: 80px;
+        right: 0;
+        width: fit-content;
+        background: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px;
     }
 
     #menuButton {
@@ -275,7 +296,8 @@ footer {
 
     nav {
         display: flex;
-        justify-content: end;
+        align-items: end;
+        flex-direction: column;
         width: 100%;
     }
 
@@ -283,7 +305,7 @@ footer {
         flex-direction: column;
     }
 
-    .form-group{
+    .form-group {
         margin-bottom: 5px;
     }
 
@@ -301,12 +323,3 @@ footer {
     }
 
 }
-
-
-
-
-
-
-
-
-

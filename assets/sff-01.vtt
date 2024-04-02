@@ -1,0 +1,291 @@
+WEBVTT
+
+
+::cue(v[voice="Speaker1"]) { color: white; background-image: rgba(0,0,0,1) }
+
+1
+00:00:10.750 --> 00:00:14.230
+<v Speaker1>What if I told you that you can have your
+cake and eat it too?
+
+2
+00:00:14.260 --> 00:00:16.660
+<v Speaker1>What if I told you that you can build a
+small PC?
+
+3
+00:00:16.660 --> 00:00:19.060
+<v Speaker1>That is powerful, but also quiet?
+
+4
+00:00:19.090 --> 00:00:20.410
+<v Speaker1>This is the answer.
+
+5
+00:00:20.410 --> 00:00:26.440
+<v Speaker1>The damn case a4, H2O, which I firmly
+believe is the best case for most people.
+
+6
+00:00:26.470 --> 00:00:30.670
+<v Speaker1>As the name implies, this case is heavily
+focused on water cooling, giving you a
+
+7
+00:00:30.670 --> 00:00:33.430
+<v Speaker1>dedicated space for a radiator and fans at
+the top.
+
+8
+00:00:33.820 --> 00:00:38.320
+<v Speaker1>It has the sharp, minimalist design with no
+branding other than a tasteful plaque on the
+
+9
+00:00:38.320 --> 00:00:43.330
+<v Speaker1>back, no logos or lights, no glass side
+panels or excessive plastic.
+
+10
+00:00:43.330 --> 00:00:45.520
+<v Speaker1>Just a nice metal box.
+
+11
+00:00:47.010 --> 00:00:51.480
+<v Speaker1>I love the circular cutouts on the panels
+and the two large rubber feet, which most
+
+12
+00:00:51.480 --> 00:00:53.640
+<v Speaker1>importantly, don't mark your desk.
+
+13
+00:00:54.480 --> 00:00:58.350
+<v Speaker1>The internal structure is steel, meaning
+that it doesn't flex easily, and the panels
+
+14
+00:00:58.350 --> 00:01:01.140
+<v Speaker1>are aluminium, which helps keep the overall
+weight down.
+
+15
+00:01:01.740 --> 00:01:06.450
+<v Speaker1>At only 11l, it's smaller than most cases
+out there, whilst not being so small that you
+
+16
+00:01:06.450 --> 00:01:09.870
+<v Speaker1>need to start making serious compromises
+with your component choices.
+
+17
+00:01:10.170 --> 00:01:16.980
+<v Speaker1>It supports three slot graphics cards up to
+322mm long, so even 4090 should be fine, and
+
+18
+00:01:16.980 --> 00:01:20.250
+<v Speaker1>you even get a cutout at the front of the
+case to feed it through for easy
+
+19
+00:01:20.250 --> 00:01:22.110
+<v Speaker1>installation, which is a very thoughtful
+touch.
+
+20
+00:01:24.760 --> 00:01:26.170
+<v Speaker1>When choosing a water cooler.
+
+21
+00:01:26.170 --> 00:01:29.080
+<v Speaker1>For this case, don't just pick the one that
+looks the best.
+
+22
+00:01:29.080 --> 00:01:32.770
+<v Speaker1>If the tubes are too long, you're going to
+have a very hard time fitting it in.
+
+23
+00:01:32.860 --> 00:01:39.940
+<v Speaker1>I'm using an EC basic AIO 240 mil, which has
+a tube length of 350mm and that fits quite
+
+24
+00:01:39.940 --> 00:01:43.030
+<v Speaker1>snugly, so make sure to check your tube
+length before you buy.
+
+25
+00:01:43.060 --> 00:01:47.500
+<v Speaker1>Make sure you also pick up two fan grilles,
+otherwise your hoses will stick inside your
+
+26
+00:01:47.500 --> 00:01:49.480
+<v Speaker1>fan blades, preventing them from spinning.
+
+27
+00:01:49.870 --> 00:01:54.700
+<v Speaker1>It supports both SFX and sfx l power
+supplies, but I really recommend sticking
+
+28
+00:01:54.700 --> 00:01:57.640
+<v Speaker1>with the standard SFX so you have more room
+for your cables.
+
+29
+00:01:57.640 --> 00:02:01.690
+<v Speaker1>You may even wish to invest in custom cables
+if the cables that came with your power
+
+30
+00:02:01.690 --> 00:02:06.310
+<v Speaker1>supply, like mine with this EVGA unit,
+aren't very flexible, which can make things a
+
+31
+00:02:06.310 --> 00:02:07.600
+<v Speaker1>whole lot more challenging.
+
+32
+00:02:07.600 --> 00:02:11.920
+<v Speaker1>If you haven't bought your power supply yet,
+consider the Corsair SFF 750.
+
+33
+00:02:11.950 --> 00:02:15.850
+<v Speaker1>As the cables it comes with are braided and
+flexible, and that'll save you some headache.
+
+34
+00:02:16.150 --> 00:02:21.130
+<v Speaker1>The case officially supports a 2.5in drive
+mounted on the removable bottom tray, but
+
+35
+00:02:21.130 --> 00:02:23.680
+<v Speaker1>with all the cables, this is going to get
+crowded very fast.
+
+36
+00:02:23.680 --> 00:02:28.270
+<v Speaker1>Just stick to an NVMe drive as there are no
+intake fans on the motherboard side of your
+
+37
+00:02:28.270 --> 00:02:33.010
+<v Speaker1>case, your NVMe will likely get very hot, so
+get a heatsink if your motherboard doesn't
+
+38
+00:02:33.010 --> 00:02:34.330
+<v Speaker1>come with one built in.
+
+39
+00:02:41.150 --> 00:02:43.610
+<v Speaker1>Start with your water cooler and mount it to
+the bracket.
+
+40
+00:02:43.610 --> 00:02:46.880
+<v Speaker1>Then drop it through the top of the case and
+screw it down.
+
+41
+00:02:49.160 --> 00:02:54.080
+<v Speaker1>Remember to orient your fans as exhaust,
+pulling air through the case and out the top.
+
+42
+00:02:54.680 --> 00:02:58.880
+<v Speaker1>Assemble your motherboard outside the case
+and attach the motherboard side of your PSU
+
+43
+00:02:58.880 --> 00:03:00.950
+<v Speaker1>cables before screwing it down.
+
+44
+00:03:03.950 --> 00:03:07.970
+<v Speaker1>Attach your cables to your power supply,
+then mount it inside the case with the fan
+
+45
+00:03:07.970 --> 00:03:09.260
+<v Speaker1>facing outward.
+
+46
+00:03:14.230 --> 00:03:17.290
+<v Speaker1>Install your motherboard headers and tidy up
+those cables.
+
+47
+00:03:18.400 --> 00:03:22.600
+<v Speaker1>I personally found routing the CPU power
+cable on the bottom and to the left of the I
+
+48
+00:03:22.600 --> 00:03:24.670
+<v Speaker1>o shield to be very helpful.
+
+49
+00:03:25.910 --> 00:03:30.470
+<v Speaker1>If you have any loose cabling, you can try
+utilizing empty space like behind the fans or
+
+50
+00:03:30.470 --> 00:03:31.760
+<v Speaker1>above the power supply.
+
+51
+00:03:34.110 --> 00:03:36.300
+<v Speaker1>Finally install your graphics card.
+
+52
+00:03:36.330 --> 00:03:38.190
+<v Speaker1>Watch out for the small clip.
+
+53
+00:03:38.190 --> 00:03:41.130
+<v Speaker1>I've seen a few instances online where
+people have broken theirs off.
+
+54
+00:03:41.160 --> 00:03:44.460
+<v Speaker1>You should be left with a very dense but
+clean looking system.
+
+55
+00:03:45.520 --> 00:03:48.940
+<v Speaker1>The only thing I don't really like about
+this case is this power cable that sits above
+
+56
+00:03:48.940 --> 00:03:50.020
+<v Speaker1>the graphics card.
+
+57
+00:03:50.140 --> 00:03:53.710
+<v Speaker1>I would have loved to have seen a hidden
+channel inside the radiator compartment to
+
+58
+00:03:53.710 --> 00:03:55.720
+<v Speaker1>keep that hidden, but it's not a big deal.
+
+59
+00:04:28.840 --> 00:04:29.920
+<v Speaker1>Links in the description.
+
+60
+00:04:29.920 --> 00:04:33.040
+<v Speaker1>If you want to pick any of these up,
+subscribe for more and I'll see you in the
+
+61
+00:04:33.040 --> 00:04:33.670
+<v Speaker1>next one.
