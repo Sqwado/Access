@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header" aria-hidden="false">
         <h1 id="MainTitle"><a href="index.html">Processit</a></h1>
         <nav>
             <button id="menuButton" name="navtoggle" aria-expanded="false" aria-controls="navlinks"
@@ -25,10 +25,11 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main" aria-hidden="false">
         <section id="presentation">
             <h2>Presentation</h2>
-            <p>Processit is a French company specialized in the design and manufacturing of Small Form Factor (SFF)
+            <p>Processit is a French company specialized in the design and manufacturing of <abbr
+                    title="Small Form Factor">SFF</abbr>
                 cases.
                 We offer a range of high-quality products that meet the needs of computer enthusiasts.
             <p>
@@ -44,17 +45,16 @@
                 <p>We offer a flagship product, the SFF-01 case. This case is designed to accommodate a mini-ITX
                     configuration. It is made of aluminum, which gives it great lightness and excellent heat
                     dissipation.
-                    The SFF-01 case has a very small volume of less than 10 liters, making it an ideal product for
-                    compact
-                    configurations.
+                    The SFF-01 case has a very small volume of 11 liters, making it an ideal product for
+                    compact configurations.
                 </p>
             </section>
             <section class="images">
                 <h3>Images and Video</h3>
-                <img src="assets/sff-01-1.webp" alt="SFF-01 Case">
-                <img src="assets/sff-01-2.webp" alt="SFF-01 Case">
-                <img src="assets/sff-01-3.webp" alt="SFF-01 Case">
-                <video id="video" controls preload="metadata">
+                <img src="assets/sff-01-1.webp" alt="SFF-01 Case front right view">
+                <img src="assets/sff-01-2.webp" alt="SFF-01 Case right view">
+                <img src="assets/sff-01-3.webp" alt="SFF-01 Case bottom view">
+                <video id="video" controls preload="metadata" alt="SFF-01 Case video presentation">
                     <source src="assets/sff-01.mp4" type="video/mp4">
                     <track default kind="captions" srclang="en" src="/assets/sff-01.vtt">
                     Your browser does not support the video tag.
@@ -146,11 +146,13 @@
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message" rows="10" cols="50"
-                                    minlength="30" required aria-label="Your message" aria-labelledby="message"
-                                    aria-required="true"></textarea>
-                                <label id="messageerror" class="error" for="message" hidden>Message is required
-                                    and must be at least 30 characters</label>
+                                <div class="form-data dircol">
+                                    <textarea id="message" name="message" placeholder="Your message" rows="10" cols="50"
+                                        minlength="30" required aria-label="Your message" aria-labelledby="message"
+                                        aria-required="true"></textarea>
+                                    <label id="messageerror" class="error" for="message" hidden>Message is required
+                                        and must be at least 30 characters</label>
+                                </div>
                             </div>
                             <input id="sendBut" type="submit" value="Send" class="sendBut" disabled aria-label="Send">
                         </div>
@@ -159,9 +161,26 @@
             </section>
         </section>
     </main>
-    <footer>
+    <footer id="footer" aria-hidden="false">
         <p>&copy; 2024 Processit</p>
     </footer>
+    <div id="confirmation" hidden aria-hidden="true" role="dialog" aria-labelledby="confirmationtext" aria-modal="true">
+        <div class="confirmation">
+            <div class="confirmationheader">
+                <button id="closeBut" class="closeBut" aria-label="Close Confirmation">Close</button>
+            </div>
+            <div class="confirmationtext" id="confirmationtext">
+                <p>Your message has been sent successfully!</p>
+            </div>
+
+            <button id="validateBut" class="sendBut" aria-label="Validate Confirmation">Validate Confirmation</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </body>
 
 </html>

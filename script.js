@@ -40,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 
-
-
+    let header = document.getElementById("header")
+    let main = document.getElementById("main")
+    let footer = document.getElementById("footer")
 
     let nameregex = "^([a-zA-Zàáâäçèéêëìíîïñòóôöùúûü \-\']+)$"
     let phoneregex = "((?:\\+|00)[17](?: |\\-)?|(?:\\+|00)[1-9]\\d{0,2}(?: |\\-)?|(?:\\+|00)1\\-\\d{3}(?: |\\-)?)?(0\\d|\\([0-9]{3}\\)|[1-9]{0,3})(?:((?: |\\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\\-)[0-9]{3}(?: |\\-)[0-9]{4})|([0-9]{7}))"
@@ -50,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let messageMinLength = 30
 
+    let contactForm = document.getElementById("contactForm")
+    let confirmation = document.getElementById("confirmation")
+    let confirmationtext = document.getElementById("confirmationtext")
+    let closeBut = document.getElementById("closeBut")
+    let validateBut = document.getElementById("validateBut")
     let firstname = document.getElementById("firstname")
     let lastname = document.getElementById("lastname")
     let email = document.getElementById("email")
@@ -131,15 +137,90 @@ document.addEventListener('DOMContentLoaded', function () {
         checkAll()
     })
 
-    sendBut.addEventListener("click", function () {
-        if (firstnameValid && lastnameValid && birthdateValid && emailValid && phoneValid && messageValid) {
-            error.innerHTML = "Message sent"
-        } else {
-            error.innerHTML = "Please fill in all fields correctly"
-        }
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault()
+        
+        openModal()
+
+        closeBut.focus()
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeModal()
+            }else if (event.key === "Enter") {
+                validModal()
+                setTimeout(function () {
+                    closeModal()
+                }, 5000)
+            }
+        })
+        
     })
 
 
+    closeBut.addEventListener("click", function () {
+        closeModal()
 
+    })
+
+    validateBut.addEventListener("click", function () {
+        validModal()
+        setTimeout(function () {
+            closeModal()
+        }, 5000)
+    })
+
+
+    function openModal() {
+        confirmation.hidden = false
+        confirmation.style.display = "flex"
+
+        header.arialHidden = true
+        main.arialHidden = true
+        footer.arialHidden = true
+
+        confirmation.arialModal = true
+        confirmation.role = "dialog"
+        confirmation.arialHidden = false
+
+        validateBut.focus()
+
+
+        confirmationtext.innerHTML = "Are you sure you want to send this message?"
+
+    }
+
+    function closeModal() {
+        confirmation.hidden = true
+        confirmation.style.display = "none"
+
+        header.arialHidden = false
+        main.arialHidden = false
+        footer.arialHidden = false
+
+        confirmation.arialModal = false
+        confirmation.role = ""
+        confirmation.arialHidden = true
+
+        validateBut.style.display = "block"
+
+    }
+
+    function validModal() {
+
+        console.log("Form submitted")
+        console.log("Firstname: " + firstname.value)
+        console.log("Lastname: " + lastname.value)
+        console.log("Email: " + email.value)
+        console.log("Phone: " + phone.value)
+        console.log("Message: " + message.value)
+
+        confirmationtext.innerHTML = "Thank you " + firstname.value + " " + lastname.value + " for your message. We will contact you at the email address " + email.value + " or the phone number " + phone.value + " as soon as possible."
+
+        contactForm.reset()
+
+        validateBut.style.display = "none"
+        
+    }
 
 });
