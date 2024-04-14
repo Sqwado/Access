@@ -13,22 +13,22 @@
 </head>
 
 <body>
-    <header id="header" aria-hidden="false" role="header">
+    <header id="header" aria-hidden="false">
         <h1 id="MainTitle"><a href="index.html">Processit</a></h1>
         <nav>
             <button id="menuButton" name="navtoggle" aria-expanded="false" aria-controls="navlinks"
-                aria-label="Navigation Menu" role="button"></button>
+                aria-label="Navigation Menu"></button>
             <ul class="nav-links" id="navlinks" style="display: none;" hidden>
-                <li><a href="#presentation" class="nav-link" aria-label="Link to Presentation section" role="link">Presentation</a>
+                <li><a href="#presentation" class="nav-link" aria-label="Link to Presentation section">Presentation</a>
                 </li>
-                <li><a href="#products" class="nav-link" aria-label="Link to Products section" role="link">Products</a></li>
-                <li><a href="#support" class="nav-link" aria-label="Link to Support section" role="link">Support</a></li>
+                <li><a href="#products" class="nav-link" aria-label="Link to Products section">Products</a></li>
+                <li><a href="#support" class="nav-link" aria-label="Link to Support section">Support</a></li>
             </ul>
         </nav>
     </header>
-    <main id="main" aria-hidden="false" role="main">
+    <main id="main" aria-hidden="false">
         <section id="banner" role="banner" aria-label="Processit Banner">
-            <img src="assets/banner.webp" alt="Processit Banner" aria-label="Processit Banner" role="img">
+            <img src="assets/banner.webp" alt="Processit Banner" aria-label="Processit Banner">
         </section>
         <section id="presentation">
             <h2>Presentation</h2>
@@ -109,13 +109,14 @@
                 <h3>Contact by Instant Messaging</h3>
                 <p>You can also contact us via instant messaging. We are available 7 days a week from 9am to 6pm.</p>
                 <form action="/" method="post" id="contactForm" aria-labelledby="contactForm"
-                    aria-describedby="contactForm" role="form">
+                    aria-describedby="contactForm">
                     <div class="form-left">
                         <div class="form-group">
                             <div class="form-data">
                                 <label for="lastname">Lastname</label>
                                 <input type="text" id="lastname" name="lastname" placeholder="Doe" required
-                                    aria-label="Lastname" aria-labelledby="lastname" aria-required="true" role="textbox">
+                                    aria-label="Lastname" aria-labelledby="lastname" aria-required="true"
+                                    >
                             </div>
                             <label id="lastnameerror" class="error" for="lastname" hidden>Lastname is
                                 required</label>
@@ -124,7 +125,8 @@
                             <div class="form-data">
                                 <label for="firstname">Firstname</label>
                                 <input type="text" id="firstname" name="firstname" placeholder="John" required
-                                    aria-label="Firstname" aria-labelledby="firstname" aria-required="true" role="textbox">
+                                    aria-label="Firstname" aria-labelledby="firstname" aria-required="true"
+                                    >
                             </div>
                             <label id="firstnameerror" class="error" for="firstname" hidden>Firstname is
                                 required</label>
@@ -133,7 +135,7 @@
                             <div class="form-data">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required
-                                    aria-label="Email" aria-labelledby="email" aria-required="true" role="textbox">
+                                    aria-label="Email" aria-labelledby="email" aria-required="true" >
                             </div>
                             <label id="emailerror" class="error" for="email" hidden>Email wrong
                                 format</label>
@@ -142,7 +144,7 @@
                             <div class="form-data">
                                 <label for="phone">Phone</label>
                                 <input type="tel" id="phone" name="phone" placeholder="0123456789" required
-                                    aria-label="Phone" aria-labelledby="phone" aria-required="true" role="textbox">
+                                    aria-label="Phone" aria-labelledby="phone" aria-required="true" >
                             </div>
                             <label id="phoneerror" class="error" for="phone" hidden>Phone wrong
                                 format</label>
@@ -155,33 +157,31 @@
                                 <div class="form-data dircol">
                                     <textarea id="message" name="message" placeholder="Your message" rows="10" cols="50"
                                         minlength="30" required aria-label="Your message" aria-labelledby="message"
-                                        aria-required="true" role="textbox"></textarea>
+                                        aria-required="true" ></textarea>
                                     <label id="messageerror" class="error" for="message" hidden>Message is required
                                         and must be at least 30 characters</label>
                                 </div>
                             </div>
-                            <input id="sendBut" type="submit" value="Send" class="sendBut" disabled aria-label="Send"
-                                role="button">
+                            <input id="sendBut" type="submit" value="Send" class="sendBut" disabled aria-label="Send">
                         </div>
                     </div>
                 </form>
             </section>
         </section>
     </main>
-    <footer id="footer" aria-hidden="false" role="contentinfo">
+    <footer id="footer" aria-hidden="false">
         <p>&copy; 2024 Processit</p>
     </footer>
-    <div id="confirmation" hidden aria-hidden="true" role="dialog" aria-labelledby="confirmationtext" aria-modal="true"
-        role="alert">
+    <div id="confirmation" hidden aria-hidden="true" role="dialog" aria-labelledby="confirmationtext" aria-modal="true">
         <div class="confirmation">
             <div class="confirmationheader">
-                <button id="closeBut" class="closeBut" aria-label="Close Confirmation" role="button">Close</button>
+                <button id="closeBut" class="closeBut" aria-label="Close Confirmation">Close</button>
             </div>
             <div class="confirmationtext" id="confirmationtext">
                 <p>Your message has been sent successfully!</p>
             </div>
 
-            <button id="validateBut" class="sendBut" aria-label="Validate Confirmation" role="button">Validate
+            <button id="validateBut" class="sendBut" aria-label="Validate Confirmation">Validate
                 Confirmation</button>
         </div>
     </div>
